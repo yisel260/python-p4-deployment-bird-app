@@ -30,7 +30,7 @@ class Birds(Resource):
 
         new_bird = Bird(
             name=data['name'],
-            species=data['image'],
+            species=data['species'],
         )
 
         db.session.add(new_bird)

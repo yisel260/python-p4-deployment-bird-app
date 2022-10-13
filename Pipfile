@@ -12,6 +12,7 @@ flask-migrate = "*"
 sqlalchemy-serializer = "*"
 psycopg2-binary = "*"
 faker = "*"
+flask-restful = "*"
 
 [dev-packages]
 

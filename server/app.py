@@ -3,13 +3,19 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-from flask import Flask, jsonify, request, make_response, send_from_directory
+from flask import Flask, jsonify, request, make_response, render_template
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 
 from models import db, Bird
 
-app = Flask(__name__, static_folder='build')
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='build',
+    template_folder='build'
+)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
@@ -17,13 +23,9 @@ app.json.compact = False
 migrate = Migrate(app, db)
 db.init_app(app)
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def serve(path):
-    if path != "" and os.path.exists(app.static_folder + '/' + path):
-        return send_from_directory(app.static_folder, path)
-    else:
-        return send_from_directory(app.static_folder, 'index.html')
+@app.route('/')
+def index():
+    return render_template("index.html")
 
 api = Api(app)
 

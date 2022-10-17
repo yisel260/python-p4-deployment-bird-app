@@ -13,6 +13,8 @@ sqlalchemy-serializer = "*"
 psycopg2-binary = "*"
 faker = "*"
 flask-restful = "*"
+honcho = "*"
+importlib-metadata = "*"
 
 [dev-packages]
 

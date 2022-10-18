@@ -12,8 +12,8 @@ from models import db, Bird
 app = Flask(
     __name__,
     static_url_path='',
-    static_folder='build',
-    template_folder='build'
+    static_folder='../client/build',
+    template_folder='../client/build'
 )
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')

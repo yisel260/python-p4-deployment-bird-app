@@ -102,6 +102,8 @@ input:focus {
 
 .card, .details {
   margin: 1rem;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 .card img {
@@ -113,12 +115,15 @@ input:focus {
 }
 
 .details {
-  border: 1px solid black;
   max-width: 50%;
-  padding: 10px;
   text-align: center;
   margin-left: auto; 
   margin-right: auto; 
+  height: auto;
+}
+
+.details img {
+  max-width: 85%;
 }
 
 @media (min-width: 768px) {

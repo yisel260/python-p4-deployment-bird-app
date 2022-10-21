@@ -12,22 +12,22 @@ with app.app_context():
     chickadee = Bird(
         name='Black-Capped Chickadee',
         species='Poecile Atricapillus',
-        image='/./images/black-capped-chickadee.jpeg'
+        image='/images/black-capped-chickadee.jpeg'
     )
     grackle = Bird(
         name='Grackle',
         species='Quiscalus Quiscula',
-        image='/./images/grackle.jpeg'
+        image='/images/grackle.jpeg'
     )
     starling = Bird(
         name='Common Starling',
         species='Sturnus Vulgaris',
-        image='/./images/starling.jpeg'
+        image='/images/starling.jpeg'
     )
     dove = Bird(
         name='Mourning Dove',
         species='Zenaida Macroura',
-        image='/./images/dove.jpeg'
+        image='/images/dove.jpeg'
     )
 
     print('Adding bird objects to transaction...')

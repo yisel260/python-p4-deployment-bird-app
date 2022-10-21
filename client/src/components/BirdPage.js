@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useParams } from "react";
 import NewBirdForm from "./NewBirdForm";
 import BirdList from "./BirdList";
 import Search from "./Search";
@@ -6,6 +6,9 @@ import Search from "./Search";
 function BirdPage({birds, onUpdateBirds}) {
   
   const [searchTerm, setSearchTerm] = useState("");
+
+  // const param = useParams()
+  
 
   function handleAddBird(newBird) {
     const updatedBirdsArray = [...birds, newBird];

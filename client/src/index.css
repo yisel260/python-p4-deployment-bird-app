@@ -100,7 +100,7 @@ input:focus {
   list-style: none;
 }
 
-.card {
+.card, .details {
   margin: 1rem;
 }
 
@@ -110,6 +110,15 @@ input:focus {
 
 .card button {
   margin-top: 0.5rem;
+}
+
+.details {
+  border: 1px solid black;
+  max-width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 @media (min-width: 768px) {

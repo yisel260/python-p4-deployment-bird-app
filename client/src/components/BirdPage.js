@@ -1,28 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import NewBirdForm from "./NewBirdForm";
 import BirdList from "./BirdList";
 import Search from "./Search";
 
-function BirdPage() {
-  const [birds, setBirds] = useState([]);
+function BirdPage({birds, onUpdateBirds}) {
+  
   const [searchTerm, setSearchTerm] = useState("");
-
-  useEffect(() => {
-    fetch("/birds")
-      .then((r) => r.json())
-      .then((birdsArray) => {
-        setBirds(birdsArray);
-      });
-  }, []);
 
   function handleAddBird(newBird) {
     const updatedBirdsArray = [...birds, newBird];
-    setBirds(updatedBirdsArray);
+    onUpdateBirds(updatedBirdsArray);
   }
 
   const displayedBirds = birds.filter((bird) => {
     return bird.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
+
+
 
   return (
     <main>

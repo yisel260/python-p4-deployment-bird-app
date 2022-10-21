@@ -1,6 +1,7 @@
 import BirdCard from "./BirdCard";
 
 function BirdList({ birds }) {
+  
   return (
     <ul className="cards">
       {birds.map((bird) => {

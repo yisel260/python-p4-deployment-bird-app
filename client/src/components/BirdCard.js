@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function BirdCard({ bird }) {
-  const { name, species, image } = bird;
+  const { id, name, species, image } = bird;
 
   const [isInStock, setIsInStock] = useState(true);
 

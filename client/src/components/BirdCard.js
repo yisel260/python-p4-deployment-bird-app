@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 function BirdCard({ bird }) {
   const { id, name, species, image } = bird;
 
-
-  
-
   return (
     <li className="card">
-      <Link to={`/birds/${id}`}>
+      <Link to={`/${id}`}>
       <img src={image} alt={name} />
       </Link>
       <h4>{name}</h4>

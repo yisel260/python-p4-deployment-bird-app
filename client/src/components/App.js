@@ -11,8 +11,8 @@ function App() {
           <main>
             <Header />
             <Routes>
-              <Route path="/birds/:id" element={ <BirdDetail /> }/>
-              <Route path="/birds" element={ <BirdPage /> }/>
+              <Route path="/:id" element={ <BirdDetail /> }/>
+              <Route path="/" element={ <BirdPage /> }/>
             </Routes>
           </main>
         </>

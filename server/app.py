@@ -24,7 +24,8 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 @app.route('/')
-def index():
+@app.route('/<int:id>')
+def index(id=0):
     return render_template("index.html")
 
 api = Api(app)

@@ -1,8 +1,7 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function BirdCard({ bird }) {
-  const { id, name, species, image } = bird;
+  const { id, name, image } = bird;
 
   return (
     <li className="card">

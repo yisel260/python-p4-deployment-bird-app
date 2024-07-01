@@ -9,6 +9,9 @@ from flask_restful import Api, Resource
 
 from models import db, Bird
 
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(
     __name__,
     static_url_path='',
